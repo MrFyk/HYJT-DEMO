@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>和易集团 · 数字化管理工作台（一期原型）</title>
+<link rel="stylesheet" href="styles.css" />
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+<div class="app-shell">
+  <!-- ===== Sidebar ===== -->
+  <aside class="app-nav">
+    <div class="brand">
+      <div class="brand-logo">和</div>
+      <div>
+        <div class="brand-name">和易工作台</div>
+        <span class="brand-sub">一期原型 v0.1</span>
+      </div>
+    </div>
+
+    <div class="nav-group">
+      <div class="nav-group-title">总览</div>
+      <a class="nav-item active" data-page="dashboard">
+        <i data-lucide="layout-dashboard" class="nav-icon"></i><span>工作台总览</span>
+      </a>
+    </div>
+
+    <div class="nav-group">
+      <div class="nav-group-title">汇报管理</div>
+      <a class="nav-item" data-page="report">
+        <i data-lucide="file-text" class="nav-icon"></i><span>汇报管理</span>
+      </a>
+    </div>
+
+    <div class="nav-group">
+      <div class="nav-group-title">经营与资金</div>
+      <a class="nav-item" data-page="biz">
+        <i data-lucide="bar-chart-3" class="nav-icon"></i><span>经营指标</span>
+        <span class="nav-badge">3</span>
+      </a>
+      <a class="nav-item" data-page="cash">
+        <i data-lucide="wallet" class="nav-icon"></i><span>资金与应收</span>
+      </a>
+    </div>
+
+    <div class="nav-group">
+      <div class="nav-group-title">协作与决策</div>
+      <a class="nav-item" data-page="issue">
+        <i data-lucide="clipboard-list" class="nav-icon"></i><span>问题与决议</span>
+        <span class="nav-badge">4</span>
+      </a>
+      <a class="nav-item" data-page="meeting">
+        <i data-lucide="calendar-check" class="nav-icon"></i><span>月度会议</span>
+      </a>
+      <a class="nav-item" data-page="opinion">
+        <i data-lucide="messages-square" class="nav-icon"></i><span>意见收集</span>
+      </a>
+    </div>
+
+    <div class="nav-group">
+      <div class="nav-group-title">内容与组织</div>
+      <a class="nav-item" data-page="content">
+        <i data-lucide="newspaper" class="nav-icon"></i><span>内容运营</span>
+      </a>
+      <a class="nav-item" data-page="org">
+        <i data-lucide="network" class="nav-icon"></i><span>组织信息</span>
+      </a>
+    </div>
+
+    <div class="nav-footer">
+      <div>数据来源：简道云 + 企微</div>
+      <div style="margin-top:4px">原型说明 · 数据均为演示</div>
+    </div>
+  </aside>
+
+  <!-- ===== Main ===== -->
+  <div class="app-content">
+    <header class="app-topbar">
+      <div class="org-switcher">
+        <i data-lucide="building-2" style="width:16px;height:16px;color:var(--text-sub)"></i>
+        <span id="orgLabel">和易集团</span>
+        <i data-lucide="chevron-down" style="width:14px;height:14px;color:var(--text-muted)"></i>
+      </div>
+      <div class="topbar-spacer"></div>
+      <button class="topbar-iconbtn" title="搜索"><i data-lucide="search" style="width:18px;height:18px"></i></button>
+      <button class="topbar-iconbtn" title="消息"><i data-lucide="bell" style="width:18px;height:18px"></i><span class="dot"></span></button>
+      <div class="user-chip">
+        <div class="user-avatar">张</div>
+        <div>
+          <div class="u-name">张建华</div>
+          <div class="u-role">集团运营副总</div>
+        </div>
+      </div>
+    </header>
+
+    <main id="page-root" class="page"></main>
+  </div>
+</div>
+
+<!-- ===== Modal 容器 ===== -->
+<div id="modal" class="modal-mask"></div>
+
+<script src="mock.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
